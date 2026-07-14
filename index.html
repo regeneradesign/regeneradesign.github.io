@@ -135,15 +135,20 @@
 
         <!-- Video 2 – YouTube (success story) -->
         <div>
-          <!-- YouTube embed: swap YOUTUBE_VIDEO_ID_EN / _ES below -->
-          <div class="video-wrap shadow-md">
+          <!-- YouTube embed with fallback link -->
+          <div class="video-wrap shadow-md mb-2">
             <iframe id="yt-video"
-              src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_EN?rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/XtpOQSC4ISA?rel=0&modestbranding=1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               title="Success story">
             </iframe>
           </div>
+          <!-- Fallback link -->
+          <a id="yt-fallback" href="https://www.youtube.com/watch?v=XtpOQSC4ISA" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm text-olive hover:text-forest underline transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Watch on YouTube
+          </a>
           <div class="mt-3">
             <h3 class="font-display text-forest text-lg font-semibold" data-i18n="vid2_title">Success story</h3>
             <p class="text-sage text-sm mt-1 font-body" data-i18n="vid2_desc">See how we planted 10,000 trees on 6,000 m² of land. Watch the full story.</p>
@@ -288,8 +293,18 @@
   <!-- ════════════════════════════════════════════
        SHARED FOOTER
   ═════════════════════════════════════════════ -->
-  <footer class="max-w-5xl mx-auto px-4 sm:px-6 py-6 text-center text-sage text-xs font-body border-t border-mist mt-4">
-    <span data-i18n="footer">© 2026 Regenera Design · Permaculture for people, place and planet.</span>
+  <footer class="max-w-5xl mx-auto px-4 sm:px-6 py-8 text-center border-t border-mist mt-4">
+    <!-- Social links -->
+    <div class="flex items-center justify-center gap-4 mb-4">
+      <a id="instagram-link" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-olive text-cream hover:bg-forest transition-colors" title="Follow us on Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.227-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.015-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
+      </a>
+      <a id="youtube-link" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-olive text-cream hover:bg-forest transition-colors" title="Subscribe on YouTube">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+    </div>
+    <!-- Copyright -->
+    <span class="text-sage text-xs font-body" data-i18n="footer">© 2026 Regenera Design · Permaculture for people, place and planet.</span>
   </footer>
 
 
@@ -357,16 +372,21 @@
     };
 
     // ── Video IDs ─────────────────────────────────────────────────────────────
-    // Replace these with real IDs when ready.
     const videoIds = {
       youtube: {
-        en: 'YOUTUBE_VIDEO_ID_EN',
-        es: 'YOUTUBE_VIDEO_ID_ES',
+        en: 'XtpOQSC4ISA',
+        es: 'yBrqJluzyjo',
       },
       instagram: {
-        en: 'INSTAGRAM_POST_ID_EN',
-        es: 'INSTAGRAM_POST_ID_ES',
+        en: 'DH_XbZKKVNK',
+        es: 'DKHWwseoRMT',
       }
+    };
+
+    // ── Social media links ────────────────────────────────────────────────────
+    const social = {
+      instagram: 'https://www.instagram.com/regeneradesign',
+      youtube: 'https://www.youtube.com/c/regeneradesign',
     };
 
     // ── State ─────────────────────────────────────────────────────────────────
@@ -400,6 +420,7 @@
 
       document.getElementById('yt-video').src =
         `https://www.youtube.com/embed/${ytId}?rel=0&modestbranding=1`;
+      document.getElementById('yt-fallback').href = `https://www.youtube.com/watch?v=${ytId}`;
       document.getElementById('ig-video').src =
         `https://www.instagram.com/p/${igId}/embed/captioned/`;
     }
@@ -416,6 +437,8 @@
     // ── Init ──────────────────────────────────────────────────────────────────
     document.getElementById('whatsapp-book-link').href =
       `https://wa.me/${whatsapp.number}?text=${encodeURIComponent(whatsapp.message)}`;
+    document.getElementById('instagram-link').href = social.instagram;
+    document.getElementById('youtube-link').href = social.youtube;
     applyLang(detectLang());
   </script>
 </body>
